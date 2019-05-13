@@ -49,5 +49,6 @@ for paciente in Mayores:
 for paciente in Menores:
     print('Los pacientes menores de edad son:',paciente)
 
+
 #5. Supong a que se atienden con orden de prioridad por gravedad de consulta, empezando por los que tienen dolor y luego por edad (mas viejo al joven), empezando por el adulto mayor. Ordene la lista empenzando por los que tienen mayor prioridad.
 
