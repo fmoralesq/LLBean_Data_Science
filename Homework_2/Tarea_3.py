@@ -22,11 +22,32 @@ agenda_hospital.extend(persona)
 for paciente in agenda_hospital:
     print(paciente)
 
-#Cuantos pacientes llegaron en total?
+#1. Cuantos pacientes llegaron en total?
 
 conteo_pacientes = len(agenda_hospital)
-print('En total llegaron ', conteo_pacientes, 'pacientes')
+print('En total llegaron', conteo_pacientes, 'pacientes')
 
-#Cuantas personas llegaron por dolor?
-conteo_dolor = agenda_hospital. count('dolor')
-print('En total llegaron ', conteo_dolor, 'pacientes')
+#2. Cuantas personas llegaron por dolor?
+Output = [item for item in agenda_hospital
+          if item[5] == 'dolor']
+print('LLegaron con dolor',len(Output),'pacientes')
+
+#3. Suponga que se atienden con orden de prioridad por edad, empezando por el adulto mayor. Ordene la lista desde el más adulto al más joven
+
+odenar_x_edad = sorted(agenda_hospital, key=lambda tup: tup[3])[::-1]
+for paciente in odenar_x_edad:
+    print(paciente)
+
+#4. Cuantos pacientes son mayores de edad? cuantos menores?
+
+Mayores = [item for item in agenda_hospital
+          if item[3] >= 65]
+Menores = [item for item in agenda_hospital
+          if item[3] < 65]
+for paciente in Mayores:
+    print('Los pacientes mayores de edad son:',paciente)
+for paciente in Menores:
+    print('Los pacientes menores de edad son:',paciente)
+
+#5. Suponga que se atienden con orden de prioridad por gravedad de consulta, empezando por los que tienen dolor y luego por edad (mas viejo al joven), empezando por el adulto mayor. Ordene la lista empenzando por los que tienen mayor prioridad.
+
