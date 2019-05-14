@@ -1,0 +1,18 @@
+# Crear un programa que haga lo siguiente
+
+principal = []
+num = int(input("Dígame cuántas palabras tiene la lista:"))
+
+for x in range(1,num+1):
+    print("Dígame la palabra",x)
+    y = input()
+    principal.append(y)
+
+print('La lista creada es:',principal)
+
+num1 = int(input("Dígame cuántas palabras tiene la lista:"))
+
+if num1==num:
+    print(num1)
+else:
+    print('Imposible!!')
