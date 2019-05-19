@@ -73,7 +73,20 @@ elif num == 2:
 # Agregar más enfermedades en un paciente en particular
 
 elif num == 3:
-    ID_enf = input('Digite numero de identificacion del paciente que desea eliminar: ')
+    ID_enf = input('Digite numero de identificacion del paciente que necesita agregar mas enfermedades: ')
+    lista1 = list(Directorio[ID_enf])
+    mi_lista_enf = lista1[4]
+
+    nuevas_enfer = input('Enliste las nuevas enfermedades tratadas en la clinica separadas por una ",": ')
+    Lista_nuevasE = nuevas_enfer.split(',')
+
+    mi_lista_enf.extend(Lista_nuevasE)
+
+    num1 = int(input('Le gustaría ver el nuevo directorio (Y/N): '))
+    if num1 == 'Y':
+        print(Directorio, '\n\n\n\n\n')
+    else:
+        print('\n\n\n\n')
 
 
 #Agregar más medicamentos en un paciente en particular
