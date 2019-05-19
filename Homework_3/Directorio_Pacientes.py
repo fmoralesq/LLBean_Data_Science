@@ -26,11 +26,17 @@ La lista inicial de pacientes puede estar escrito en el código asi como su info
 
 '''
 
+#LLamar diccionario original
+
 Directorio = {'01':['Francisco','Morales',89674527,'Puris',['Asma','Colitis','gripe'],['Parecetamol','Pastillita','Dexametazona']]}
+
+#Crear ciclo para determinar que tarea del menu se necesita realizar
 
 num=0
 while num < 8:
     num = int(input('Por favor seleccione la transaccion que desea realizar:\n1. Ingreso de un paciente nuevo\n2. Borrado de un paciente\n3. Agregar más enfermedades en un paciente en particular\n4. Agregar más medicamentos en un paciente en particular\n5. Generar reporte de las enfermedades tratadas en la clínica\n6. Generar reporte de los medicamentos entregados en la clínica\n7. Comparar 2 pacientes en particular: cuales enfermedades tienen en común. Cuales no?. Lo mismo con los medicamentos.\n8. Cerrar Directorio'))
+
+# Ingreso de un paciente nuevo
 
 if num == 1:
     ID_nuevo = input('Digite numero de identificacion del paciente nuevo: ')
@@ -50,6 +56,9 @@ if num == 1:
         print(Directorio,'\n\n\n\n\n')
     else:
         print('\n\n\n\n')
+
+# Borrado de un paciente
+
 elif num == 2:
     ID_del = input('Digite numero de identificacion del paciente que desea eliminar: ')
     if ID_del in Directorio is True:
@@ -61,5 +70,20 @@ elif num == 2:
     else:
         print('\n\n\n\n')
 
+# Agregar más enfermedades en un paciente en particular
+
 elif num == 3:
     ID_enf = input('Digite numero de identificacion del paciente que desea eliminar: ')
+
+
+#Agregar más medicamentos en un paciente en particular
+#elif num == 4:
+
+#Generar reporte de las enfermedades tratadas en la clínica
+#elif num == 5:
+
+#Generar reporte de los medicamentos entregados en la clínica
+#elif num == 6:
+
+#Comparar 2 pacientes en particular: cuales enfermedades tienen en común. Cuales no?. Lo mismo con los medicamentos
+#elif num == 7:
