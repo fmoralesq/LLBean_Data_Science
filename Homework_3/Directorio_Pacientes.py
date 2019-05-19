@@ -90,7 +90,21 @@ elif num == 3:
 
 
 #Agregar más medicamentos en un paciente en particular
-#elif num == 4:
+elif num == 4:
+    ID_med = input('Digite numero de identificacion del paciente que necesita agregar mas medicamentos: ')
+    lista1 = list(Directorio[ID_med])
+    mi_lista_med = lista1[5]
+
+    nuevas_med = input('Enliste las nuevas medicinas dadas en la clinica separadas por una ",": ')
+    Lista_nuevasM = nuevas_med.split(',')
+
+    mi_lista_med.extend(Lista_nuevasM)
+
+    num1 = int(input('Le gustaría ver el nuevo directorio (Y/N): '))
+    if num1 == 'Y':
+        print(Directorio, '\n\n\n\n\n')
+    else:
+        print('\n\n\n\n')
 
 #Generar reporte de las enfermedades tratadas en la clínica
 #elif num == 5:
@@ -99,4 +113,20 @@ elif num == 3:
 #elif num == 6:
 
 #Comparar 2 pacientes en particular: cuales enfermedades tienen en común. Cuales no?. Lo mismo con los medicamentos
-#elif num == 7:
+elif num == 7:
+    ID_1 = input('Digite numero de identificacion del primer paciente que desea comparar: ')
+    ID_2 = input('Digite numero de identificacion del segundo paciente que desea comparar: ')
+
+    lista1 = list(Directorio[ID_1])
+    mi_lista_enf1 = set(lista1[4])
+    mi_lista_med1 = set(lista1[5])
+
+    lista2 = list(Directorio[ID_2])
+    mi_lista_enf2 = set(lista2[4])
+    mi_lista_med2 = set(lista2[5])
+
+    enf_comun = mi_lista_enf1 & mi_lista_enf2
+    med_comun = mi_lista_med1 & mi_lista_med2
+
+    print('Las enfermedades que tienen en comun son:',enf_comun,'\nLos medicamentos que tienen en comun son:',med_comun)
+
