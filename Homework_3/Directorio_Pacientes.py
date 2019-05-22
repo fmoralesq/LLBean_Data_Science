@@ -106,10 +106,24 @@ while num < 8:
             print('\n\n\n\n')
 
     #Generar reporte de las enfermedades tratadas en la clínica
-    #elif num == 5:
+    elif num == 5:
+        p = []
+        for k in Directorio.values():
+            lista_enf = k[4]
+            p = p + lista_enf
+            rep_enf = set(p)
+        print('El reporte de enfermedades es:\n',rep_enf)
+
 
     #Generar reporte de los medicamentos entregados en la clínica
-    #elif num == 6:
+    elif num == 6:
+        p = []
+        for k in Directorio.values():
+            lista_med = k[5]
+            q = q + lista_med
+            rep_med = set(q)
+        print('El reporte de medicinas es:\n', rep_med)
+
 
     #Comparar 2 pacientes en particular: cuales enfermedades tienen en común. Cuales no?. Lo mismo con los medicamentos
     elif num == 7:
