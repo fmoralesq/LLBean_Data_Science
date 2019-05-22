@@ -141,5 +141,5 @@ while num < 8:
         enf_comun = mi_lista_enf1 & mi_lista_enf2
         med_comun = mi_lista_med1 & mi_lista_med2
 
-        print('Las enfermedades que tienen en comun son:',enf_comun,'\nLos medicamentos que tienen en comun son:',med_comun)
+        print('Las enfermedades que tienen en comun son:',enf_comun,'\nLos medicamentos que tienen en comun son:',med_comun,'\n\n\n\n\n')
 
