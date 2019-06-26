@@ -12,7 +12,6 @@ print(All_S)
 
 #Create File with filtered values
 All_S.to_excel(r'\\CRSJBO-FS\UserData$\fmorales\Desktop\MDP Extract_Test.xlsx',sheet_name='Sheet1')
-sheet_name='Sheet1'
 #Query a usar
 
 
