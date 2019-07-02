@@ -31,23 +31,3 @@ All_S.to_excel(writer,'Sheet1')
 KsK.to_excel(writer,'Sheet2')
 Exc.to_excel(writer,'Sheet3')
 writer.save()
-
-#Query a usar
-
-
-'''
-Select distinct
-IMD_ID,
-ITEM_ID,
-PROD_ID,
-ITEM_DESC,
-MERC_DSCRPTR_DESC,
-MERC_DSCRPTR_ID
-from 
-DSS.PROD_REF
-where 
-PROD_DEL_FLG = 'N'
-and IMD_ID in (XXXXXX,
-'''
-
-
