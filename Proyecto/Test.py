@@ -11,7 +11,7 @@ data2 = pd.read_excel (r'\\CRSJBO-FS\UserData$\fmorales\Desktop\Reference_Info.x
 df2 = pd.DataFrame(data2)
 
 #Join between Data Frames
-df_cd = pd.merge(df1, df2, how='left', left_on = 'Id', right_on = 'Id')
+df_cd = pd.merge(df2, df1, on='IMD_ID',how='left')
 
 #Filter by 1_AllStores
 AllStores = df_cd['Sale Loc:']=='1_AllStores'
