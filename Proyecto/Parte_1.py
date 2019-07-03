@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import filedialog
 import pandas as pd
 
+#Create Window
 root = tk.Tk()
 
 canvas1 = tk.Canvas(root, width=300, height=300, bg='lightsteelblue')
@@ -9,6 +10,7 @@ canvas1.pack()
 
 
 def getExcel():
+    #Take info from Excel files
     global writer
     data1 = pd.read_excel(r'\\CRSJBO-FS\UserData$\fmorales\Desktop\6.14 MDP Extract.xlsx')
     df1 = pd.DataFrame(data1)
@@ -38,7 +40,7 @@ def getExcel():
     Exc.to_excel(writer, 'Sheet3')
     writer.save()
 
-
+#Create button
 browseButton_Excel = tk.Button(text='Create New Excel', command=getExcel, bg='green', fg='white',
                                font=('helvetica', 12, 'bold'))
 canvas1.create_window(150, 150, window=browseButton_Excel)
